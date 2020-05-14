@@ -1,13 +1,20 @@
 import React from 'react';
-import Header from './Components/Header/Header'
+import Header from './Components/Header/Header';
+import Main from './Components/Main/Main';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  state ={
+
+  }
+render(){
   return (
     <div className="App">
       <Header />
+      <Main />
     </div>
   );
+}
 }
 
 export default App;
