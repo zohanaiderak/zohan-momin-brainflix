@@ -1,0 +1,45 @@
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+    height: 169px;
+    &__logo{
+        height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    &__search{
+        display: flex;
+        align-items: center;
+        background-image: url(../../Assets/Icons/SVG/Icon-search.svg);
+        background-repeat: no-repeat;
+        background-position: 15px;
+        width: 288px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #e1e1e1;
+        height: 49px;
+        padding: 15px 15px 15px 40px ;
+    }
+    &__user{
+        display: flex;
+        margin: 8px 0 16px;
+        height: 48px;
+        &--button{
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 224px;
+            margin-right: 16px;
+        }
+        &--img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+}
