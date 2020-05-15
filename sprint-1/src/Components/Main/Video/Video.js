@@ -18,14 +18,16 @@ const Video = (props) =>{
                 />
                 {props.video.sideVideo.map(sidevid =>
                     {if(props.video.mainVideo.title !== sidevid.title)
-                    return(
-                    <Sidevid 
-                        key ={sidevid.id}
-                        image ={sidevid.image}
-                        title = {sidevid.title}
-                        channel = {sidevid.channel}
-                    />)}
-)}
+                        return(
+                            <Sidevid 
+                                key ={sidevid.id}
+                                image ={sidevid.image}
+                                title = {sidevid.title}
+                                channel = {sidevid.channel}
+                            />
+                        )
+                    }
+                )}
         </div>   
     )  
 }
@@ -45,7 +47,7 @@ const Vidd = (props) =>{
     
     return(
         <React.Fragment>
-            <video width="320px" controls poster={props.image}></video>
+            <video controls poster={props.image}></video>
             <h1 className="mainVideo__title ">{props.title}</h1>
             <span className="mainVideo__channel">{props.channel}</span>
             <span className="mainVideo__timestamp">{props.timestamp}</span>
