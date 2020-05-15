@@ -1,5 +1,6 @@
 import React from 'react'
-
+import userImg from '../../../Assets/Images/Mohan-muruge.jpg'
+import Sidevid from './SideVid'
 
 const Video = (props) =>{
     console.log(props.video.mainVideo.comments.commentsarr)
@@ -7,7 +8,7 @@ const Video = (props) =>{
         <div className = "mainVideo">
                 <Vidd 
                     key ={props.video.mainVideo.id}
-                    image = {props.video.mainVideo.image.Video1}
+                    image = {props.video.mainVideo.image}
                     title = {props.video.mainVideo.title} 
                     channel = {props.video.mainVideo.channel}
                     timestamp = {props.video.mainVideo.timestamp}
@@ -15,15 +16,16 @@ const Video = (props) =>{
                     description = {props.video.mainVideo.description}
                     comments = {props.video.mainVideo.comments.commentsarr} 
                 />
-                {props.video.sideVideo.map((sidevid,i) =>
+                {props.video.sideVideo.map(sidevid =>
+                    {if(props.video.mainVideo.title !== sidevid.title)
+                    return(
                     <Sidevid 
                         key ={sidevid.id}
                         image ={sidevid.image}
                         title = {sidevid.title}
                         channel = {sidevid.channel}
-                    />
-
-                )}
+                    />)}
+)}
         </div>   
     )  
 }
@@ -49,6 +51,16 @@ const Vidd = (props) =>{
             <span className="mainVideo__timestamp">{props.timestamp}</span>
             <span className="mainVideo__views">{props.views}</span>
             <p className="mainVideo__desc">{props.description}</p>
+            <p>{props.comments.length} Comments</p>
+            <div className="mainVideo__form">
+                <img src={userImg} alt="Mohan-Muruge"></img>
+                <form>
+                    <label className="form__label">Name</label>
+                    <input type="text" className="form__input"></input>
+                    <label>Comment</label>
+                    <textarea></textarea>
+                </form>
+            </div>
             <div className="mainVideo__channel--comm"> 
                 {props.comments.map(comm =>
                     <Comm 
@@ -62,22 +74,5 @@ const Vidd = (props) =>{
         </React.Fragment>
     )
 }
-
-const Sidevid = (props) =>{
-    return(
-        <>
-            <img src={props.image} ></img>
-            <ul>
-                <li>{props.title}</li>
-                <li>{props.channel}</li>
-            </ul>
-        </>
-    )
-}
-
-
-
-
-
 
 export default Video;

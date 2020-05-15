@@ -16,7 +16,7 @@ const videoData ={
     title: 'BMX Rampage: 2018 Highlights',
     description: "On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title",
     channel: 'By Red Cow',
-    image: {Video1},
+    image: Video1,
     views: '1,001,023',
     likes: '110,985',
     duration: '0:00/0:42',
@@ -29,55 +29,55 @@ const videoData ={
     id: uuidv4(), 
     title: 'BMX Rampage: 2018 Highlights', 
     channel: 'By Red Cow', 
-    image: {Video1} 
+    image: Video1
 },
 {
     id: uuidv4(), 
     title: 'Become A Travel Pro In One Easy Lesson…', 
     channel: 'Scotty Cranmer', 
-    image: {Video2} 
+    image: Video2 
 },
 {
     id: uuidv4(), 
     title: 'Les Houches The Hidden Gem Of The…', 
     channel: 'Scotty Cranmer', 
-    image: {Video3}
+    image: Video3
 },
 {
     id: uuidv4(), 
     title: 'Travel Health Useful Medical Information…', 
     channel: 'Scotty Cranmer', 
-    image: {Video4} 
+    image: Video4 
 },
 {
     id: uuidv4(), 
     title: 'Cheap Airline Tickets Great Ways To Save', 
     channel: 'Emily Harper', 
-    image: {Video5} 
+    image: Video5 
 },
 {
     id: uuidv4(), 
     title: 'Take A Romantic Break In A Boutique Hotel', 
     channel: 'Ethan Owen', 
-    image: {Video6} 
+    image: Video6 
 },
 {
     id: uuidv4(), 
     title: 'Choose The Perfect Accommodations', 
     channel: 'Lydia Perez', 
-    image: {Video7} 
+    image: Video7 
 },
 {
     id: uuidv4(), 
     title: 'Cruising Destination Ideas', 
     channel: 'Timothy Austin', 
-    image: {Video8} 
+    image: Video8 
 },
 {
     id: uuidv4(), 
     title: 'Train Travel On Track For Safety', 
     channel: 'Scotty Cranmer', 
-    image: {Video9} 
+    image: Video9 
 }]
 }
 
