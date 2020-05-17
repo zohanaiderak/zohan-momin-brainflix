@@ -21,5 +21,60 @@ let commentsarr = [
     }
 ];
 
+function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+  
+    var interval = Math.floor(seconds / 31536000);
+    if (interval > 1) {
+      return interval + " years ago";
+    }
+    if(interval = 1){
+        return interval + " year ago";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+      return interval + " months ago";
+    }
+    if(interval = 1){
+        return interval + " month ago";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+      return interval + " days ago";
+    }
+    if(interval = 1){
+        return interval + " day ago";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+      return interval + " hours ago";
+    }
+    if(interval = 1){
+        return interval + " hour ago";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+      return interval + " minutes ago";
+    }
+    if(interval = 1){
+        return interval + " minute ago";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
+  var aDay = 24*60*60*1000;
+  let timeNow = commentsarr.map(tim =>{
+           let time = (new Date(tim.timestamp)).getTime();
+              let curr = timeSince(time);
+                  console.log(curr);
+                      tim.timestamp = curr;
+  //                     commentsarr.map(obj =>{
+  //                            obj.timestamp = curr;})
+                         console.log(commentsarr)
+                      return curr;
+  })
+  
+  console.log(timeNow);
+
 
 export default commentsarr;
