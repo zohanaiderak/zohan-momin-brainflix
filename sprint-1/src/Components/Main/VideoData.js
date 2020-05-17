@@ -1,5 +1,6 @@
-import Video2 from '../../Assets/Images/video-list-1.jpg'
+
 import Video1 from '../../Assets/Images/video-list-0.jpg'
+import Video2 from '../../Assets/Images/video-list-1.jpg'
 import Video3 from '../../Assets/Images/video-list-2.jpg'
 import Video4 from '../../Assets/Images/video-list-3.jpg'
 import Video5 from '../../Assets/Images/video-list-4.jpg'
@@ -33,19 +34,19 @@ const videoData ={
 },
 {
     id: uuidv4(), 
-    title: 'Become A Travel Pro In One Easy Lesson...', 
+    title: 'Become A Travel Pro In One Easy Lesson', 
     channel: 'Scotty Cranmer', 
     image: Video2 
 },
 {
     id: uuidv4(), 
-    title: 'Les Houches The Hidden Gem Of The…', 
+    title: 'Les Houches The Hidden Gem Of The Chamonix', 
     channel: 'Scotty Cranmer', 
     image: Video3
 },
 {
     id: uuidv4(), 
-    title: 'Travel Health Useful Medical Information…', 
+    title: 'Travel Health Useful Medical Information For', 
     channel: 'Scotty Cranmer', 
     image: Video4 
 },

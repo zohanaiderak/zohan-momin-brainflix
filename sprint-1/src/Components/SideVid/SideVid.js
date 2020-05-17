@@ -1,4 +1,25 @@
 import React from 'react';
+import './SideVid.scss';
+
+const SideVideo = (props)  =>{
+    return(
+    <div className="sideVideo">
+                <p className="sideVideo__title">NEXT VIDEO</p>
+                {props.sdvideo.sideVideo.map(sidevid =>{
+                    if(props.sdvideo.mainVideo.title !== sidevid.title)
+                        return(
+                            <Sidevid 
+                                key ={sidevid.id}
+                                image ={sidevid.image}
+                                title = {sidevid.title}
+                                channel = {sidevid.channel}
+                            />
+                        )
+                    return true;
+                    })
+                }
+            </div>)
+}
 
 const Sidevid = (props) =>{
     return(
@@ -12,4 +33,4 @@ const Sidevid = (props) =>{
     )
 }
 
-export default Sidevid ;
+export default SideVideo ;

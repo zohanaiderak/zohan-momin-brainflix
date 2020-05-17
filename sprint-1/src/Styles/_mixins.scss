@@ -16,38 +16,6 @@
     }   
 }
 
-
-
-@mixin div2{
-    text-align: center;
-    text-decoration: none;
-    padding-bottom: 13px;
-    width:50%;
-    @include tablet{
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        width: fit-content;
-        height: 80px;
-        padding:0;
-        margin-left: 5rem;
-    }
-    @include desktop{
-        margin-left: 56px ;
-        width: 80px;
-    }
-}
-
-@mixin hero-height{
-    height: 183px;
-    @include tablet{
-      height: 400px;
-    }
-    @include desktop{
-      height: 670px;
-    }
-}
-
 @mixin padding{
     padding: 0 16px;
     @include tablet{
@@ -56,22 +24,6 @@
     @include desktop{
         padding: 0 60px;
     }
-}
-
-@mixin article-img{
-    height:145px; 
-    @include tablet{
-        height: 362px;
-    }  
-    @include desktop{
-        height:450px ;
-    }
-}
-
-@mixin section-center {
-    align-self: center;
-    width: 100%;
-    max-width: 896px;
 }
 
 @mixin hover{ 

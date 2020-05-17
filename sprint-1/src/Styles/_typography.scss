@@ -28,13 +28,13 @@
          url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Light.ttf");
 }
 
-@mixin h1-hero{
+@mixin h1-title{
     font-family: "Avenir-Bold";
     font-size: 24px; 
     line-height: 32px;
     @include tablet{
-        font-size: 60px; 
-        line-height: 68px;
+        font-size: 36px; 
+        line-height: 44px;
     }
 }
 
@@ -45,16 +45,6 @@
     @include tablet{
         font-size: 36px;
         line-height: 44px;
-    }
-}
-
-@mixin quote{
-    font-family: $font-demi;
-    font-size: 16px; 
-    line-height: 22px;
-    @include tablet{
-        font-size: 24px;
-        line-height: 32px;
     }
 }
 
