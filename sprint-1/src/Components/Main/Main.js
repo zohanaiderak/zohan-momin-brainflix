@@ -1,11 +1,10 @@
 import React from 'react';
-import Video from './Video/Video'
-import videoData from './Video/VideoData'
+import Video from '../Main-video/Video'
+import videoData from './VideoData'
 
 class Main extends React.Component{
     state =({
         video : videoData,
-        comments : videoData.mainVideo.comments
       })
     
     render(){
@@ -13,7 +12,6 @@ class Main extends React.Component{
         <main>
         <Video 
          video={this.state.video}
-         comments = {this.state.comments}
         />
         <section id="section"></section>
         </main>
