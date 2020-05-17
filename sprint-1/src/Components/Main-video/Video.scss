@@ -2,32 +2,41 @@
 @import '../../Styles/variables';
 @import '../../Styles/typography';
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .mainVideo{
-    @include padding;
+    
+    display: flex;
+    flex-direction: column;
     &__container{
         position: relative;
-        margin-left:-16px;
         width: 320px;
+        align-self: center;
         &--video{
             width: 100%;
-            height: auto;
+            height: 183px;
             box-sizing: border-box;
         }
         &--controls{
             @include padding;
             position: absolute;
             left: 0px;
-            bottom: 10px;
+            bottom: 15px;
             width: 100%;
             display: flex;
             box-sizing: border-box;
         }
     }
     &__title{
+        @include padding;
         @include h1-hero;
-        margin-bottom: 16px;
+        margin:32px 0 16px;
     }
     &__sub1{
+        @include padding;
         margin-bottom: 32px;
         &--channel{
         font-family: $font-demi;
@@ -35,11 +44,10 @@
         &--timestamp{
             color: $form-color;
             padding-right: 5px;
-            margin-bottom: 32px;
         }
     }
     &__sub2{
-        margin-bottom: 0;
+        margin: 0 16px;
         padding-bottom: 24px;
         border-bottom: 2px solid $bar-color;
         &--views{
@@ -49,39 +57,45 @@
         }
     }
     &__desc{
+        @include padding;
         @include h4-mobile;
         margin:24px 0 40px;
     }
     &__comlength{
+        @include padding;
         font-family: $font-demi;
         margin-bottom: 32px;
     }
-    &__form{ 
+    &__form{
         width: 288px;
         display: flex;
         box-sizing: border-box;
         align-self: center;
         justify-content: space-between;
+        border-bottom:2px solid $bar-color;
         @include tablet{
             width: 528px;
             margin-top: 0px;    //to fix spacing
             padding: 0 ;        //to fix spacing
         }
-       &--face{
-        margin-top: 16px;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        @include tablet{
-          margin-top: 25px;
+        &--face{
+          margin-top: 16px;
           width: 48px;
           height: 48px;
-        }
+          border-radius: 50%;
+          @include tablet{
+            margin-top: 25px;
+            width: 48px;
+            height: 48px;
+          }
+      }
     }
     &__comm{
-        border-top:2px solid $bar-color;
-    }
-    }
+      margin: 0 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
 .spacing-likenView{
@@ -113,6 +127,17 @@
 .scrubber{
     margin: 0 8px;
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.video-length{
+  color: $secondary-color;
+  display: none;
+  @include tablet{
+    padding-left: 16px;
+    display: inline;
+  }
 }
 
 .sec{
@@ -129,7 +154,7 @@
     }
     &--input{
       padding: 10px;
-      border: 2px solid $form-color;
+      border: 2px solid $bar-color;
       border-radius: 5px;
       box-sizing: border-box;
       margin-bottom: 16px;
@@ -140,7 +165,7 @@
           padding: 16px ;
       }
       &:focus{
-        border: 2px solid $primary-color;
+        border: 2px solid $button-color;
         border-radius: 5px;
         outline: none;
       }
@@ -151,7 +176,6 @@
     &--submit{
       background-color: $button-color ;
       color: $secondary-color ;
-      margin-bottom:24px;
       padding: 10px 10px;
       border: none;
       border-radius: 4px;
@@ -160,9 +184,6 @@
         border-radius: 2px;
         box-shadow: inset 0 40px -4px #000000;
         filter: blur(32%);
-      }
-      &:hover{
-        background-color: black;
       }
       @include tablet{
         width: 160px;
@@ -174,10 +195,10 @@
 
 .post{
   @include h4-mobile;
+  padding: 24px 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid $form-color;
+  border-bottom: 2px solid $bar-color;
   @include tablet{
     display: flex;
     justify-content: flex-start;
@@ -185,7 +206,7 @@
   &__dp{
     background-color: $form-color;
     @extend .mainVideo__form--face;
-    margin: 0;
+    margin: 0 16px 0 0;
   }
   &__comment{
     width: 230px;
@@ -196,17 +217,46 @@
       width: 480px;
     }
     &--name{
-      font-weight: bold;
+      font-family: $font-demi;
+    }
+    &--timestamp{
+     @extend .mainVideo__sub1--timestamp;
     }
     &--text{
       display: block; 
       width:100%;
-      padding-right: 5px;
+      padding-top: 16px;
       @include tablet{
         width: 400px; 
       }
     }  
   } 
+}
+
+.sideVideo{
+  @include padding;
+  &__title{
+    margin: 40px 0;
+    @extend .mainVideo__sub1--timestamp;
+  }
+  &__item{
+    display: flex;
+    margin-bottom: 24px;
+    &--poster{
+      width: 120px;
+      height: 70px;
+      border-radius: 4px;
+      margin-right: 16px;
+    }
+    &--data{
+      @include h4-mobile;
+      list-style: none;
+      .title{
+        font-family: $font-demi;
+        margin-bottom: 16px;
+      }
+    }
+  }
 }
 
 

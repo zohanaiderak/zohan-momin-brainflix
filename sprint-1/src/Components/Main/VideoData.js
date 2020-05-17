@@ -33,7 +33,7 @@ const videoData ={
 },
 {
     id: uuidv4(), 
-    title: 'Become A Travel Pro In One Easy Lesson…', 
+    title: 'Become A Travel Pro In One Easy Lesson...', 
     channel: 'Scotty Cranmer', 
     image: Video2 
 },

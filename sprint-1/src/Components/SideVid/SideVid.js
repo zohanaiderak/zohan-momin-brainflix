@@ -2,13 +2,13 @@ import React from 'react';
 
 const Sidevid = (props) =>{
     return(
-        <>
-            <img src={props.image} alt ="Side Video Pic"></img>
-            <ul>
-                <li>{props.title}</li>
-                <li>{props.channel}</li>
+        <div className="sideVideo__item">
+            <img className="sideVideo__item--poster" src={props.image} alt ="Side Video Pic"></img>
+            <ul className="sideVideo__item--data">
+                <li className="title">{props.title}</li>
+                <li className="channel">{props.channel}</li>
             </ul>
-        </>
+        </div>
     )
 }
 

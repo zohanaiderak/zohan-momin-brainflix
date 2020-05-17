@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../Assets/Logo/Logo-brainflix.svg';
 import UserImg from '../../Assets/Images/Mohan-muruge.jpg'
-import Styles from './Header.scss'
+import './Header.scss'
 import plus from '../../Assets/Icons/SVG/Icon-upload.svg'
 
 
@@ -13,7 +13,7 @@ function Header(){
             <input className="header__search" type="text" placeholder="Search"></input>
             <div className="header__user">
             <button className="header__user--button">
-            <input type="image" src={plus}></input> &nbsp; UPLOAD
+            <img src={plus} alt="upload icon"></img> &nbsp; UPLOAD
             </button>
             <img className="header__user--img" src={UserImg} alt="Mohan-Muruge"></img>
             </div>
