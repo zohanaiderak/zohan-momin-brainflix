@@ -260,6 +260,9 @@
           padding: 16px ;
           height: 48px;
       }
+      @include desktop{
+        overflow: hidden;
+      }
       &:focus{
         border: 2px solid $button-color;
         border-radius: 4px;
