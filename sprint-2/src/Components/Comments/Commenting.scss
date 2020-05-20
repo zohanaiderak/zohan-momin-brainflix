@@ -1,0 +1,48 @@
+@import '../../Styles/mixins';
+@import '../../Styles/variables';
+@import '../../Styles/typography';
+@import '../Main-video/Video.scss';
+
+.post{
+    @include h4-mobile;
+    padding: 13px 0;
+    list-style: none;
+    display: flex;
+    border-bottom: 2px solid $bar-color;
+    width: 288px;
+    @include tablet{
+      display: flex;
+      width: 720px;
+    }
+    @include desktop{
+      width: 712px;
+    }
+    &__dp{
+      background-color: $form-color;
+      @extend .mainVideo__form-face;
+      margin: 0 16px 0 0;
+    }
+    &__comment{
+      width: 230px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include tablet{
+        width: 624px;
+      }
+    }
+    &__comment-name{
+      font-family: $font-demi;
+    }
+    &__comment-timestamp{
+      @extend .mainVideo__sub1-timestamp;
+    }
+    &__comment-text{
+      display: block; 
+      width:100%;
+      padding-top: 5px;
+      @include tablet{
+        width: 100%; 
+      } 
+    } 
+  }
