@@ -7,7 +7,7 @@ const Upload = () =>{
         <>
         <h1>Upload Video</h1>
         <p>VIDEO THUMBNAIL</p>
-        <img src={Image}></img>
+        <img src={Image} alt="Upload Video"></img>
         <Form />
         </>
     )

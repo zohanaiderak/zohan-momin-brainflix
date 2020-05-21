@@ -3,19 +3,19 @@ import React from 'react'
 
 class Form extends React.Component{
     state = {
-        title :"",
-        description :""
+        title : "",
+        description : ""
     }
 
     updateTitle = event =>{
-        this.setState=({
-            title : event.target.value
+        this.setState({
+            title : event.target.value,
         })
     }
     
     updateDescription = event =>{
-        this.setState=({
-            description : event.target.value
+        this.setState({
+            description : event.target.value,
         })
     }
 
@@ -27,12 +27,13 @@ class Form extends React.Component{
     render() {
     return(
         <form>
-            <p className ="input">TITLE YOUR VIDEO
+            <p className ="input">TITLE YOUR VIDEO:{" "}
             <input 
                 type="text"
                 name="title"
                 onChange={this.updateTitle}
-                value={this.state.title}/></p>
+                value = {this.state.title}
+                /></p>
             <p className="input">ADD A VIDEO DESCRIPTION
             <textarea
                 type="text"
