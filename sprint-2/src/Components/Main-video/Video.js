@@ -9,31 +9,50 @@ import like from '../../Assets/Icons/SVG/Icon-likes.svg'
 import Commenting from '../Comments/Commenting'
 import SideVideo from '../SideVid/SideVid';
 import Videos from '../Main/VideoData'
+import axios from 'axios'
+import {BrowserRouter , Route ,Link} from 'react-router-dom'
 
 /*I know i shouldn't have broken down my children elements further but i wasn't 
 sure which one is good practice. will wait for the feedback if anything*/
 
 class Video extends React.Component{
-    state = ({
-        sdvideo: Videos
-    })
+    state={
+        video : []
+    }
+
+    fetchcomp = id =>{
+        axios.get(`https://project-2-api.herokuapp.com/videos?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74/${id}`)
+        .then(response =>{
+            this.setState({
+                video: response.data
+            })
+        })
+        .catch(err=>console.log('err' , err))
+    }
+
+    componentDidMount(){
+        console.log('component did mount');
+        console.log('Route Params', this.props.match);
+        const { id } = this.props.match.params;
+        this.fetchcomp(id);
+    }
+
     render(){
     return(
         <div className = "mainVideo">
             <Vidd 
-                key ={this.props.video.mainVideo.id}
-                image = {this.props.video.mainVideo.image}
-                title = {this.props.video.mainVideo.title} 
-                channel = {this.props.video.mainVideo.channel}
-                timestamp = {this.props.video.mainVideo.timestamp}
-                views = {this.props.video.mainVideo.views}
-                likes = {this.props.video.mainVideo.likes}
-                description = {this.props.video.mainVideo.description}
-                comments = {this.props.video.mainVideo.comments.commentsarr} 
+                key ={this.props.video.id}
+                image = {this.props.video.image}
+                title = {this.props.video.title} 
+                channel = {this.props.video.channel}
+                timestamp = {this.props.video.timestamp}
+                views = {this.props.video.views}
+                likes = {this.props.video.likes}
+                description = {this.props.video.description}
+                comments = {this.props.video.comments}
             />
-          <SideVideo 
-            sdvideo = {this.state.sdvideo}
-          />  
+          <SideVideo
+          /> 
         </div>   
     ) } 
 }
@@ -56,6 +75,8 @@ const Vidd = (props) =>{
         </>
     )
 }
+
+
 
 
 const MainVid = (props) =>{
@@ -100,7 +121,7 @@ const VidData = (props) =>{
                 </p>
             </div>
             <p className="mainVideo__desc">{props.description}</p>
-            <p className="mainVideo__comlength">{props.comments.length} Comments</p>
+            <p className="mainVideo__comlength">3 Comments</p>
             <div className="mainVideo__form">
                 <img className="mainVideo__form-face" src={userImg} alt="Mohan-Muruge"></img>
                 <form className="form">
@@ -111,9 +132,9 @@ const VidData = (props) =>{
                     <button className="form__submit">COMMENT</button>
                 </form>
             </div>
-            <Commenting
+            {/* <Commenting
                comments = {props.comments}
-            />
+            /> */}
         </div>
     )
 }
