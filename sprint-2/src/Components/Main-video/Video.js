@@ -14,63 +14,111 @@ import {BrowserRouter , Route ,Link} from 'react-router-dom'
 
 /*I know i shouldn't have broken down my children elements further but i wasn't 
 sure which one is good practice. will wait for the feedback if anything*/
+const API_URL = "https://project-2-api.herokuapp.com"
+const API_KEY = "?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74"
 
 class Video extends React.Component{
     state={
-        video : []
+        video : {},
+        sdvideo:[]
+    }
+    componentDidMount(){
+        if(!this.props.match.params.id) { 
+        axios
+              .get(`${API_URL}/videos${API_KEY}`)
+              .then(response =>{
+                this.setState({
+                  sdvideo: response.data
+                },
+                () => this.fetchVideoById(this.state.sdvideo[0].id)
+                )
+              })
+              .catch(err => console.log(err))
+        }
+        else{
+            axios.get(`${API_URL}/videos/${this.props.match.params.id}${API_KEY}`)
+            .then(response =>{
+                this.setState({
+                    video : response.data
+                },
+                ()=>this.fetchSideVideoById() 
+                )
+            })
+        }
     }
 
-    fetchcomp = id =>{
-        axios.get(`https://project-2-api.herokuapp.com/videos?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74/${id}`)
+    fetchSideVideoById = () => {
+        axios.get(`${API_URL}/videos/${API_KEY}`)
         .then(response =>{
             this.setState({
-                video: response.data
+                sdvideo : response.data,
             })
-        })
-        .catch(err=>console.log('err' , err))
+        }) 
     }
 
-    componentDidMount(){
-        console.log('component did mount');
-        console.log('Route Params', this.props.match);
-        const { id } = this.props.match.params;
-        this.fetchcomp(id);
+
+
+    fetchVideoById = (id) => {
+        axios.get(`${API_URL}/videos/${id}${API_KEY}`)
+        .then(response =>{
+            this.setState({
+                video : response.data,
+            })
+        }) 
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.match.params.id !== this.props.match.params.id && !this.props.match.params.id){
+            axios
+                .get(`${API_URL}/videos/${API_KEY}`)
+                .then(response=>{
+                    this.setState({
+                        sdvideo:response.data
+                    },
+                    ()=>this.fetchVideoById(this.state.sdvideo[0].id)
+                    )
+                })
+        } else if (prevProps.match.params.id !== this.props.match.params.id){
+            axios
+                .get(`${API_URL}/videos/${this.props.match.params.id}${API_KEY}`)
+                .then(response=>{
+                    this.setState({
+                        video: response.data,
+                    })
+                })
+        }
     }
 
     render(){
+        let othervideos= this.state.sdvideo.filter(video => video.id !== this.state.video.id)
+
     return(
+        <main>
         <div className = "mainVideo">
             <Vidd 
-                key ={this.props.video.id}
-                image = {this.props.video.image}
-                title = {this.props.video.title} 
-                channel = {this.props.video.channel}
-                timestamp = {this.props.video.timestamp}
-                views = {this.props.video.views}
-                likes = {this.props.video.likes}
-                description = {this.props.video.description}
-                comments = {this.props.video.comments}
+                video={this.state.video}
             />
-          <SideVideo
+          <SideVideo sdvideo = {othervideos}
           /> 
-        </div>   
-    ) } 
-}
+        </div>  
+        <section id="section"></section>
+        </main> 
+    ) } }
 
 const Vidd = (props) =>{ 
     return(
         <>
             <MainVid 
-                image = {props.image}
+                image = {props.video.image}
             />
             <VidData
-                title = {props.title}
-                channel = {props.channel}
-                timestamp = {props.timestamp}
-                views = {props.views}
-                likes = {props.likes}
-                description = {props.description}
-                comments = {props.comments}
+                title = {props.video.title}
+                channel = {props.video.channel}
+                timestamp = {props.video.timestamp}
+                views = {props.video.views}
+                likes = {props.video.likes}
+                description = {props.video.description}
+                comments = {props.video.comments}
             />
         </>
     )
@@ -101,6 +149,7 @@ const MainVid = (props) =>{
 }
 
 const VidData = (props) =>{
+      console.log(props.comments)  
     return(
         <div className="mainVideo__data">
             <h1 className="mainVideo__title ">{props.title}</h1>
@@ -132,11 +181,13 @@ const VidData = (props) =>{
                     <button className="form__submit">COMMENT</button>
                 </form>
             </div>
-            {/* <Commenting
+            <Commenting
                comments = {props.comments}
-            /> */}
+            />
         </div>
     )
 }
+
+
 
 export default Video;
