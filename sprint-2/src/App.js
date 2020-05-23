@@ -1,11 +1,9 @@
 import React from 'react';
 import Header from './Components/Header/Header';
-import Main from './Pages/Main/Main';
 import './App.css';
 import {BrowserRouter , Route , Switch} from 'react-router-dom';
 import Upload from './Pages/Upload/Upload'
-import axios from 'axios'
-import Video from './Components/Main-video/Video'
+import Video from './Pages/Video/Video'
 
 class App extends React.Component {
  
@@ -18,7 +16,6 @@ render(){
           <Route path="/Upload" component={Upload}></Route>
           <Route path="/" exact component={Video}></Route>
           <Route path="/:id" component={Video}></Route>
-          
         </Switch>
       </BrowserRouter>
     </div>

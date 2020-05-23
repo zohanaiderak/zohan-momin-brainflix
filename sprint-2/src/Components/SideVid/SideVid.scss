@@ -1,8 +1,11 @@
 @import '../../Styles/mixins';
 @import '../../Styles/variables';
 @import '../../Styles/typography';
-@import '../Main-video/Video.scss';
+@import '../../Pages/Video/Video.scss';
 
+*{
+  text-decoration: none;
+}
 
 .sideVideo{
     @include padding;
@@ -19,6 +22,7 @@
       @extend .mainVideo__sub1-timestamp;
     }
     &__item{
+      color: $primary-color;
       display: flex;
       margin-bottom: 24px;
       &--poster{

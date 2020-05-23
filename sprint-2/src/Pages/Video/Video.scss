@@ -1,0 +1,314 @@
+@import '../../Styles/mixins';
+@import '../../Styles/variables';
+@import '../../Styles/typography';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.mainVideo{
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__bgcolor{
+      background-color: $primary-color;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__container{
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-self: center;
+      @include tablet{
+        width: 768px;
+        justify-content: center;
+      }
+      @include desktop{
+        width: 1200px;
+      }
+    }
+    &__video{
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        @include tablet{
+          width: 700px;
+          height: 52.083vw;
+          max-height: 540px;
+        }
+        @include desktop{
+          width: 944px;
+          height: 540px;
+        }
+    }
+    &__controls{
+        @include padding;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        left: 0px;
+        bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        @include tablet{
+          width: 700px;
+          left: 34px;
+          padding: 0 8px;
+        }
+        @include desktop{
+          left: 128px;
+          width: 944px;
+          padding: 0 16px;
+        }
+    }
+    &__title{
+        @include padding;
+        @include h1-title;
+        margin:32px 0 16px;
+        @include tablet{
+          margin: 48px 0 24px;
+        }
+        @include desktop{
+          padding: 0;
+          line-height: 36px;      //had to reduce line height to accomodate the siszing with side video in desktop
+        }
+    }
+    &__sub1{
+        @include tablet{
+          width: 200px;
+          margin: 0;
+        }
+        margin-bottom: 32px;
+    }
+    &__sub1-channel{
+    font-family: $font-demi;
+    }
+    &__sub1-timestamp{
+        color: $form-color;
+        
+    }
+    &__sub2-views{
+        display: inline-flex;
+        align-items: center;
+        padding-right: 25px;
+          @include tablet{
+            padding: 0 0 0 24px;
+          }
+          @include desktop{
+            &:nth-child(2){ 
+              margin-right: 32px;
+            }
+          }
+        }
+    &__desc{
+        @include padding;
+        @include h4-mobile;
+        margin:24px 0 40px;
+        @include tablet{
+          width: 520px;
+          margin: 40px 0 64px;
+        }
+        @include desktop{
+          padding: 0;
+        }
+    }
+    &__comlength{
+        @include padding;
+        font-family: $font-demi;
+        margin-bottom: 32px;
+        @include desktop{
+          padding: 0;
+          line-height: 16px;            //had to reduce line height to accomodate the siszing with side video in desktop
+        }
+    }
+    &__form{
+        margin: 0 16px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-self: center;
+        border-bottom:2px solid $bar-color;
+        padding-bottom: 24px;
+        @include tablet{
+            justify-content: center;
+            min-width: 712px;
+            align-items: center;
+            margin: 0 24px;
+        }
+        @include desktop{
+            margin: 0;
+            width: 712px;
+            height: 100px;
+        }
+      }
+    &__form-face{
+      margin-top: 16px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 16px;
+      @include tablet{
+        margin-top: 22px;
+      }
+    }
+    &__comm{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+.mainVideo__data{
+  @include desktop{
+    width: 712px;
+    margin-right: 24px;
+  }
+}
+
+.mainVideo__sub{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid $bar-color;
+  margin: 0 16px;
+  padding-bottom: 24px;
+  @include tablet{
+    margin: 0 24px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include desktop{
+    margin: 0;
+  }
+}
+
+.spacing-likenView{
+    padding-right:8px ;
+}
+
+.play{
+    padding: 5px 17px;
+    display: flex;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-style: none;
+    background-color: rgba($primary-color, $alpha: 0.6);
+    height: 30px;
+    @include desktop{
+      padding: 5px 16px;
+    }
+    &__align{
+        display: flex;
+        align-items: center;  
+    }
+    &__scrubber{
+        width: 100%;
+        border-style: none;
+        border-radius: 2px;
+        height: 4px;
+        background-color: black;
+    }
+}
+
+.scrubber{
+    margin: 0 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.video-length{
+  color: $secondary-color;
+  display: none;
+  @include tablet{
+    padding-left: 16px;
+    display: inline;
+  }
+}
+
+.sec{
+    padding-right: 18px;
+}
+
+.form{
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+      flex-direction: row;
+      width: max-content;
+    }
+
+    &__data{
+      margin-bottom: 16px;
+      overflow-y: hidden;
+      @include tablet{
+        margin: 0;
+        width: 440px;
+        margin-right: 16px;
+      }
+      @include desktop{
+        width: 436px;
+      }
+    }
+    &__data-input{
+      width: 100%;
+      padding: 10px;
+      border: 2px solid $bar-color;
+      border-radius: 5px;
+      box-sizing: border-box;
+      height: 96px;
+      @include tablet{
+          padding: 16px ;
+          height: 48px;
+      }
+      @include desktop{
+        overflow: hidden;
+      }
+      &:focus{
+        border: 2px solid $button-color;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+    &__data-label{
+      @include form-title;
+    }
+    &__submit{
+      background-color: $button-color ;
+      color: $secondary-color ;
+      padding: 10px 10px;
+      border: none;
+      border-radius: 4px;
+      @include tablet{
+        width: 160px;
+        height: 48px;
+        margin-top: 25px;
+        margin-right: 40px;
+      }
+      @include desktop{
+        margin-right: 32px;
+      }
+      &:focus{
+        outline: 0;
+        border-radius: 2px;
+        box-shadow: inset 0 40px -4px #000000;
+        filter: blur(32%);
+      }
+      
+    }
+  }
+
+
+
+
+
+
+

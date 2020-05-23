@@ -1,7 +1,6 @@
 import React from 'react';
 import './SideVid.scss';
-import axios from 'axios';
-import {BrowserRouter ,Route ,Switch, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class SideVideo extends React.Component{
     render(){
@@ -11,8 +10,7 @@ class SideVideo extends React.Component{
                     {this.props.sdvideo.map(sidevid =>{
                         if(this.props.title !== sidevid.title)
                             return(
-                                <Link to={`/${sidevid.id}`}><Sidevid 
-                                    key ={sidevid.id}
+                                <Link key={sidevid.id} to={`/${sidevid.id}`}><Sidevid 
                                     image ={sidevid.image}
                                     title = {sidevid.title}
                                     channel = {sidevid.channel}
@@ -20,13 +18,6 @@ class SideVideo extends React.Component{
                             )
                         return true;
                     })}
-                
-                {/* <BrowserRouter>
-                    <Route path="/" component={SideVideo} />
-                        <Switch>
-                            <Route path={`${this.props.match.path}/:id`} component={Video} />
-                        </Switch>
-                </BrowserRouter>  */}
             </div>
         )
     }
