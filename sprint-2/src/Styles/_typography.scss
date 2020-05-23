@@ -1,42 +1,33 @@
 @font-face{
     font-family: "Avenir-Bold";
-    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf"),
-         url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf");
+    src: url("../assets/_global-font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf"),
+         url("../assets/_global-font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf");
 }
 
 @font-face{
     font-family: "Avenir";
-    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf"),
-         url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro.ttf");
+    src: url("../assets/_global-font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf"),
+         url("../assets/_global-font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro.ttf");
 }
 
 @font-face{
     font-family: "Avenir-Medium";
-    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Medium.otf"),
-         url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf");
+    src: url("../assets/_global-font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Medium.otf"),
+         url("../assets/_global-font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Medium.ttf");
 }
 
 @font-face{
     font-family: "Avenir-demi";
-    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Demi.otf"),
-         url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Demi.ttf");
+    src: url("../assets/_global-font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Demi.otf"),
+         url("../assets/_global-font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Demi.ttf");
 }
 
 @font-face{
     font-family: "Avenir-Light";
-    src: url("../Assets/_Global-Font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Light.otf"),
-         url("../Assets/_Global-Font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Light.ttf");
+    src: url("../assets/_global-font/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Light.otf"),
+         url("../assets/_global-font/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Light.ttf");
 }
 
-@mixin h1-title{
-    font-family: "Avenir-Bold";
-    font-size: 24px; 
-    line-height: 32px;
-    @include tablet{
-        font-size: 36px; 
-        line-height: 44px;
-    }
-}
 
 @mixin h1-mobile{
     font-family: "Avenir-Bold";

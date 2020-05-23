@@ -71,7 +71,7 @@
     }
     &__title{
         @include padding;
-        @include h1-title;
+        @include h1-mobile;
         margin:32px 0 16px;
         @include tablet{
           margin: 48px 0 24px;

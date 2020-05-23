@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid $bar-color;
     @include padding;
     height: 169px;
     @include tablet{
@@ -29,7 +30,7 @@
     &__search{
         display: flex;
         align-items: center;
-        background-image: url(../../Assets/Icons/SVG/Icon-search.svg);
+        background-image: url(../../assets/icons/svg/Icon-search.svg);
         background-repeat: no-repeat;
         background-position: 15px;
         width: 100%;

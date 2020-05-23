@@ -1,15 +1,16 @@
 import React from 'react'
-import Image from '../../Assets/Images/Upload-video-preview.jpg'
+import Image from '../../assets/images/Upload-video-preview.jpg'
 import Form from '../../Components/Form/Form'
+import './Upload.scss'
 
 const Upload = () =>{
     return(
-        <>
-        <h1>Upload Video</h1>
-        <p>VIDEO THUMBNAIL</p>
-        <img src={Image} alt="Upload Video"></img>
+        <div className="upload-page">
+        <h1 className="heading">Upload Video</h1>
+        <p className="thumbnail">VIDEO THUMBNAIL</p>
+        <img className="videoUpload" src={Image} alt="Upload Video"></img>
         <Form />
-        </>
+        </div>
     )
 }
 

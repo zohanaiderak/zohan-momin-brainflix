@@ -101,7 +101,7 @@ class Video extends React.Component{
     } 
 }
 
-const Vidd = (props) =>{ 
+const Vidd = (props) =>{  
     return(
         <>
             <MainVid 
@@ -110,7 +110,7 @@ const Vidd = (props) =>{
             <VidData
                 title = {props.video.title}
                 channel = {props.video.channel}
-                timestamp = {props.video.timestamp}
+                timestamp = {new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(props.video.timestamp)}
                 views = {props.video.views}
                 likes = {props.video.likes}
                 description = {props.video.description}

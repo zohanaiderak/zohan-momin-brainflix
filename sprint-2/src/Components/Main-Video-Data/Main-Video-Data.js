@@ -1,7 +1,7 @@
 import React from 'react'
-import userImg from '../../Assets/Images/Mohan-muruge.jpg'
-import view from '../../Assets/Icons/SVG/Icon-views.svg'
-import like from '../../Assets/Icons/SVG/Icon-likes.svg'
+import userImg from '../../assets/images/Mohan-muruge.jpg'
+import view from '../../assets/icons/svg/Icon-views.svg'
+import like from '../../assets/icons/svg/Icon-likes.svg'
 import Comments from '../../Components/Comments/Comments'
 
 const VidData = (props) =>{
@@ -32,7 +32,7 @@ const VidData = (props) =>{
               <form className="form">
                   <span className="form__data">
                       <label className="form__data-label">JOIN THE CONVERSATION</label>
-                      <textarea className="form__data-input textArea"></textarea>
+                      <textarea className="form__data-input textArea" placeholder="This was easily the most spectacular BMX moment ever"></textarea>
                   </span>
                   <button className="form__submit">COMMENT</button>
               </form>

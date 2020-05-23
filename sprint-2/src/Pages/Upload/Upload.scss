@@ -1,0 +1,66 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+@import '../../styles/_typography.scss';
+
+
+
+.upload-page{
+    @include padding;
+}
+
+.heading{
+    @include h1-mobile;
+    padding: 24px 0 32px;
+    @include tablet{
+        border-bottom: 1px solid $form-color;
+    }
+}
+
+.thumbnail,.input{
+    @include form-title;
+    padding-top: 32px;
+}
+
+.des{
+    padding-top: 24px;
+    ::placeholder{
+        color: $primary-color;
+    }
+}
+
+.videoUpload{
+    width: 288px;
+    height: 153px;
+    border-radius: 4px;
+}
+
+.title{
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $form-color;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.description{
+    @extend .title;
+    height: 143px;
+}
+
+.button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: $button-color;
+    color: $secondary-color;
+    margin: 32px 0 24px;
+}
+
+.cancel{
+    margin: 0;
+    padding: 0 0 24px;
+    border: none;
+    background-color: white;
+    color: $button-color;
+}

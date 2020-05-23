@@ -2,7 +2,7 @@ import React from 'react';
 import LogoImg from '../../assets/logo/Logo-brainflix.svg';
 import UserImg from '../../assets/images/Mohan-muruge.jpg'
 import './Header.scss'
-import plus from '../../assets/icons/SVG/Icon-upload.svg'
+import plus from '../../assets/icons/svg/Icon-upload.svg'
 import { Link } from 'react-router-dom';
 
 

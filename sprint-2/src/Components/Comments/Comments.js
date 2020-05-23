@@ -14,7 +14,7 @@ const Comments = (props) =>{
                     <Comm 
                         key = {comm.id}
                         name = {comm.name}
-                        timestamp = {comm.timestamp}
+                        timestamp = {new Intl.DateTimeFormat('en-US',{year: 'numeric', month: '2-digit',day: '2-digit'}).format(comm.timestamp)}
                         comment = {comm.comment}
                     />
                 )
