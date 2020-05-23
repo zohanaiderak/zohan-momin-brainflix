@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid $bar-color;
+    border-bottom: 0.5px solid $bar-color;
     @include padding;
     height: 169px;
     @include tablet{
         flex-direction: row;
         height: 80px;
+        justify-content: space-between;
     }
     &__logo{
         height: 48px;
@@ -22,6 +23,7 @@
         outline: none;
         @include tablet{
             margin-right: 169px;
+            width: 100px;
         }
         @include desktop{
             margin-right: 509px ;
@@ -41,6 +43,7 @@
         padding: 15px 15px 15px 40px ;
         @include tablet{
             margin-right: 24px;
+            width: 252px;
         }
         &:focus{
             border: 2px solid $button-color;
@@ -73,8 +76,7 @@
             outline: none;
             @include tablet{
                 margin-right: 24px;
-                width: max-content;
-                padding: 0 16px;
+                width: 103px;
             }
             span{
                 height: 16px;

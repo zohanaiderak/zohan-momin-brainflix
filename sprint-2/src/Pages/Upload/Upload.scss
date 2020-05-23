@@ -12,22 +12,45 @@
     @include h1-mobile;
     padding: 24px 0 32px;
     @include tablet{
-        border-bottom: 1px solid $form-color;
+        
+        padding: 48px 0 32px;
     }
 }
 
 .thumbnail,.uploadInput{
     @include form-title;
+    @include tablet{
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
 }
 
 .uploadInput{
     padding-top: 32px;
+    @include tablet{
+        padding-top: 40px;
+    }
+}
+
+::placeholder{
+    color: $primary-color;
+    font-family: $font-medium;
 }
 
 .des{
-    padding-top: 24px;
-    ::placeholder{
-        color: $primary-color;
+    padding: 24px 0 0;  
+    @include tablet{
+        padding-bottom: 40px;
+    }
+}
+
+.uploadForm{
+    @include tablet{
+        border-top: 1px solid $bar-color;
+        border-bottom: 1px solid $bar-color;
+    }
+    @include desktop{
+        display: flex;
     }
 }
 
@@ -35,6 +58,13 @@
     width: 288px;
     height: 153px;
     border-radius: 4px;
+    @include tablet{
+        width: 344px;
+        height: 183px;
+    }
+    @include desktop{
+        margin-right: 24px;
+    }
 }
 
 .uploadTitle{
@@ -43,27 +73,54 @@
     border: 1px solid $form-color;
     padding: 15px;
     box-sizing: border-box;
+    background-color: $secondary-color;
+}
+
+.span2{
+    width: 100%;
 }
 
 .uploadDescription{
     @extend .uploadTitle;
     height: 143px;
+    background-color: $secondary-color;
+    @include desktop{
+        height: 94px;
+    }
+}
+
+.button__container{
+    margin: 32px 0 24px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    @include tablet{
+    flex-direction: row-reverse;
+    margin: 40px 0 24px;
+    }
 }
 
 .publishButton{
     width: 100%;
+    max-width: 288px;
     padding: 15px;
     border-radius: 4px;
     border: none;
     background-color: $button-color;
     color: $secondary-color;
-    margin: 32px 0 24px;
+    font-family: $font-demi;
+    @include tablet{
+        width: 160px;
+    }
 }
 
 .cancel{
     margin: 0;
-    padding: 0 0 24px;
     border: none;
     background-color: white;
     color: $button-color;
+    @include tablet{
+        width: fit-content;
+        padding-right: 48px;
+    }
 }
