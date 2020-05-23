@@ -6,7 +6,7 @@ import './Upload.scss'
 const Upload = () =>{
     return(
         <div className="upload-page">
-        <h1 className="heading">Upload Video</h1>
+        <h1 className="uploadHeading">Upload Video</h1>
         <p className="thumbnail">VIDEO THUMBNAIL</p>
         <img className="videoUpload" src={Image} alt="Upload Video"></img>
         <Form />
