@@ -9,20 +9,20 @@ const MainVid = (props) =>{
     return(
         <span className="mainVideo__bgcolor">
             <div className ="mainVideo__container">
-                    <video className="mainVideo__video" poster={props.image}></video>
-                    <div className="mainVideo__controls">
-                        <button className="play">
-                            <img className="play__align" src={play} alt="play-icon"></img>
-                        </button>
-                        <button className="play scrubber">
-                            <hr className="play__scrubber"></hr>
-                            <span className="video-length">0:00/0:42</span>
-                        </button>
-                        <button className="play">
-                            <img className="play__align sec" src={mute} alt="mute-icon"></img>
-                            <img className="play__align" src={screen} alt="vol-icon"></img>
-                        </button>
-                    </div>
+                <video className="mainVideo__video" poster={props.image}></video>
+                <div className="mainVideo__controls">
+                    <button className="play">
+                        <img className="play__align" src={play} alt="play-icon"></img>
+                    </button>
+                    <button className="play scrubber">
+                        <hr className="play__scrubber"></hr>
+                        <span className="video-length">0:00/0:42</span>
+                    </button>
+                    <button className="play">
+                        <img className="play__align sec" src={mute} alt="mute-icon"></img>
+                        <img className="play__align" src={screen} alt="vol-icon"></img>
+                    </button>
+                </div>
             </div>
         </span>
     )

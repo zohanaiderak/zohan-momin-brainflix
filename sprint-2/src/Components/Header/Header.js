@@ -10,13 +10,16 @@ import { Link } from 'react-router-dom';
 function Header(){
     return(
         <header className = "header">
-            <Link to ="/" className="header__logo"><Logo/></Link>
+            <Link to ="/" className="header__logo">
+                <Logo/>
+            </Link>
             <input className="header__search" type="text" placeholder="Search"></input>
             <div className="header__user">
-            <Link to="/Upload" className="header__user--button">
-            <img src={plus} alt="upload icon"></img> &nbsp; <span>UPLOAD</span>
-            </Link>
-            <img className="header__user--img" src={UserImg} alt="Mohan-Muruge"></img>
+                <Link to="/Upload" className="header__user--button">
+                    <img src={plus} alt="upload icon"></img> &nbsp; 
+                    <span>UPLOAD</span>
+                </Link>
+                <img className="header__user--img" src={UserImg} alt="Mohan-Muruge"></img>
             </div>
         </header>
     )
@@ -30,4 +33,3 @@ const Logo = (props) =>{
 }
 
 export default Header;
-export {Logo};

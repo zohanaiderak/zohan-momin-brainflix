@@ -12,7 +12,7 @@ const API_KEY = "?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74"
 
 class Video extends React.Component{
     state={
-        video : {},
+        video: {},
         sdvideo:[]
     }
     componentDidMount(){
@@ -88,14 +88,15 @@ class Video extends React.Component{
         let othervideos= this.state.sdvideo.filter(video => video.id !== this.state.video.id)
         return(
             <main>
-            <div className = "mainVideo">
-            <Vidd 
-                video={this.state.video}
-            />
-            <SideVideo sdvideo = {othervideos}
-            /> 
-            </div>  
-            <section id="section"></section>
+                <div className = "mainVideo">
+                    <Vidd 
+                        video={this.state.video}
+                    />
+                    <SideVideo 
+                        sdvideo = {othervideos}
+                    /> 
+                </div>  
+                <section id="section"></section>
             </main> 
         )
     } 

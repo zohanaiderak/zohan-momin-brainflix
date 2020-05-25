@@ -7,17 +7,21 @@ class SideVideo extends React.Component{
         return(
             <div className="sideVideo">
                 <p className="sideVideo__title">NEXT VIDEO</p>
-                    {this.props.sdvideo.map(sidevid =>{
+                {
+                    this.props.sdvideo.map(sidevid =>{
                         if(this.props.title !== sidevid.title)
                             return(
-                                <Link key={sidevid.id} to={`/${sidevid.id}`}><Sidevid 
+                                <Link key={sidevid.id} to={`/${sidevid.id}`}>
+                                    <Sidevid 
                                     image ={sidevid.image}
                                     title = {sidevid.title}
                                     channel = {sidevid.channel}
-                                /></Link>
+                                    />
+                                </Link>
                             )
                         return true;
-                    })}
+                    })
+                }
             </div>
         )
     }
