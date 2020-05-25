@@ -106,11 +106,15 @@
     padding: 15px;
     border-radius: 4px;
     border: none;
+    outline: none;
     background-color: $button-color;
     color: $secondary-color;
     font-family: $font-demi;
     @include tablet{
         width: 160px;
+    }
+    &:hover{
+        background-color: $hover-color;
     }
 }
 
@@ -122,5 +126,9 @@
     @include tablet{
         width: fit-content;
         padding-right: 48px;
+    }
+    &:hover{
+        color: $hover-color;
+        background-color: white;
     }
 }

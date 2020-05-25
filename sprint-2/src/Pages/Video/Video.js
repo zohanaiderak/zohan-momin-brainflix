@@ -116,6 +116,7 @@ const Vidd = (props) =>{
                 likes = {props.video.likes}
                 description = {props.video.description}
                 comments = {props.video.comments}
+                video ={props.video.video+'?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74'}
             />
         </>
     )

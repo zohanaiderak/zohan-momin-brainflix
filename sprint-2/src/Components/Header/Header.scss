@@ -21,6 +21,7 @@
         border: none;
         background-color: white;
         outline: none;
+        cursor: pointer;
         @include tablet{
             margin-right: 169px;
             width: 100px;
@@ -74,6 +75,9 @@
             width: 224px;
             margin-right: 16px;
             outline: none;
+            &:hover{
+                background-color: $hover-color;
+            }
             @include tablet{
                 margin-right: 24px;
                 width: 103px;
@@ -93,3 +97,4 @@
 input::placeholder{
     color: black;
 }
+
