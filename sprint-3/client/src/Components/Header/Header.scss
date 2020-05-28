@@ -1,0 +1,100 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+@import '../../styles/typography';
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.5px solid $bar-color;
+    @include padding;
+    height: 169px;
+    @include tablet{
+        flex-direction: row;
+        height: 80px;
+        justify-content: space-between;
+    }
+    &__logo{
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: white;
+        outline: none;
+        cursor: pointer;
+        @include tablet{
+            margin-right: 169px;
+            width: 100px;
+        }
+        @include desktop{
+            margin-right: 509px ;
+        }
+    }
+    &__search{
+        display: flex;
+        align-items: center;
+        background-image: url(../../assets/icons/svg/Icon-search.svg);
+        background-repeat: no-repeat;
+        background-position: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #e1e1e1;
+        height: 48px;
+        padding: 15px 15px 15px 40px ;
+        @include tablet{
+            margin-right: 24px;
+            width: 252px;
+        }
+        &:focus{
+            border: 2px solid $button-color;
+            border-radius: 4px;
+            outline: none;
+        }
+    }
+    &__user{
+        display: flex;
+        justify-content: flex-end;
+        margin: 8px 0 16px;
+        height: 48px;
+        box-sizing: border-box;
+        @include tablet{
+            margin: 0;
+        }
+        &--button{
+            text-decoration: none;
+            color: $secondary-color;
+            font-family: $font-demi;
+            align-items: center;
+            display: flex;
+            vertical-align: baseline;
+            justify-content: center;   // to align input button and the text
+            background-color: $button-color;
+            border: none;
+            border-radius: 4px;
+            width: 224px;
+            margin-right: 16px;
+            outline: none;
+            &:hover{
+                background-color: $hover-color;
+            }
+            @include tablet{
+                margin-right: 24px;
+                width: 103px;
+            }
+            span{
+                height: 16px;
+            }
+        }
+        &--img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+}
+
+input::placeholder{
+    color: black;
+}
+
