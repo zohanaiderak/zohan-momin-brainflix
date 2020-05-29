@@ -2,12 +2,12 @@ import React from 'react'
 import Image from '../../assets/images/Upload-video-preview.jpg'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid';
-
 const API_URL = process.env.REACT_APP_API_URL;
 
 class Form extends React.Component{
     state = {
         id: uuidv4(),
+        image: Image,
         title : "",
         description : ""
     }
@@ -34,6 +34,11 @@ class Form extends React.Component{
           .then(res=>{
               console.log(res)
           })
+        this.setState({
+            title: "",
+            description: ""
+        })
+        alert("VIDEO UPLOADED, CHECK THE MAIN PAGE TO VIEW IT")
     }
 
     render() {
