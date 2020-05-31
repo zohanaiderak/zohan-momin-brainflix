@@ -35,7 +35,7 @@ class Video extends React.Component{
                 this.setState({
                     video : response.data[0]
                 },
-                ()=>this.fetchSideVideoById() 
+                    ()=>this.fetchSideVideoById() 
                 )
             })
         }
@@ -66,10 +66,8 @@ class Video extends React.Component{
             axios
             .get(`${API_URL}`)
             .then(response=>{
-                this.setState({
-                    sdvideo:response.data
-                },
-                ()=>this.fetchVideoById(this.state.sdvideo[0].id)
+                this.setState(
+                ()=>this.fetchVideoById(this.state.sdvideo[0].id)  //fixed the removal of side video simce it doesn't change
                 )
             })
         } 
@@ -103,12 +101,12 @@ class Video extends React.Component{
     } 
 }
 
-const Vidd = (props) =>{ 
-    console.log(props.video) 
+const Vidd = (props) =>{
     return(
         <>
             <MainVid 
                 image = {props.video.image}
+                video ={props.video.video}
             />
             <VidData
                 title = {props.video.title}
@@ -118,7 +116,6 @@ const Vidd = (props) =>{
                 likes = {props.video.likes}
                 description = {props.video.description}
                 comments = {props.video.comments}
-                video ={props.video.video}
             />
         </>
     )

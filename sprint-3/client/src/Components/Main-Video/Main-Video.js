@@ -1,11 +1,11 @@
 import React from 'react'
-
 import play from '../../assets/icons/svg/Icon-play.svg'
 import mute from '../../assets/icons/svg/Icon-volume.svg'
 import screen from '../../assets/icons/svg/Icon-fullscreen.svg'
 
 
 const MainVid = (props) =>{
+    console.log(props)
     return(
         <span className="mainVideo__bgcolor">
             <div className ="mainVideo__container">

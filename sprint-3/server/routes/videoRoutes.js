@@ -70,7 +70,7 @@ const mainVideo = [
         "views": "1,001,023",
         "likes": "110,985",
         "duration": "4:01",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1545162149000,
         "comments": [
             {
