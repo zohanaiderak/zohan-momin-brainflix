@@ -105,7 +105,7 @@ const mainVideo = [
         "views": "2,043,765",
         "likes": "400,058",
         "duration": "7:26",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1537003624000,
         "comments": [
             {
@@ -140,7 +140,7 @@ const mainVideo = [
         "views": "16,950",
         "likes": "3,856",
         "duration": "4:13",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1534234842000,
         "comments": [
             {
@@ -175,7 +175,7 @@ const mainVideo = [
         "views": "739,945",
         "likes": "98,352",
         "duration": "8:34",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1536070744000,
         "comments": [
             {
@@ -210,7 +210,7 @@ const mainVideo = [
         "views": "72,342",
         "likes": "8,785",
         "duration": "2:59",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1518625200000,
         "comments": [
             {
@@ -245,7 +245,7 @@ const mainVideo = [
         "views": "345,987",
         "likes": "76,588",
         "duration": "12:26",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1545377524000,
         "comments": [
             {
@@ -280,7 +280,7 @@ const mainVideo = [
         "views": "252,796",
         "likes": "4,905",
         "duration": "7:31",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1520167535028,
         "comments": [
             {
@@ -315,7 +315,7 @@ const mainVideo = [
         "views": "29,984",
         "likes": "2,552",
         "duration": "5:58",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1538006507000,
         "comments": [
             {
@@ -350,7 +350,7 @@ const mainVideo = [
         "views": "3,092,284",
         "likes": "75,985",
         "duration": "4:20",
-        "video": "https://project-2-api.herokuapp.com/stream",
+        "video": "http://project-2-api.herokuapp.com/stream?api_key=3150c1ea-e454-4fed-b9e5-31afa9947a74",
         "timestamp": 1531007012000,
         "comments": [
             {

@@ -9,7 +9,7 @@ const MainVid = (props) =>{
     return(
         <span className="mainVideo__bgcolor">
             <div className ="mainVideo__container">
-                <video className="mainVideo__video" poster={props.image} ><source src={props.video} type="video/mp4"></source></video>
+                <video className="mainVideo__video" poster={props.image} src={props.video} type="video/mp4"/>
                 <div className="mainVideo__controls">
                     <button className="play">
                         <img className="play__align" src={play} alt="play-icon"></img>

@@ -102,6 +102,7 @@ class Video extends React.Component{
 }
 
 const Vidd = (props) =>{
+    console.log(props.video.video)
     return(
         <>
             <MainVid 
